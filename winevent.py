@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 base_url = 'https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/event.aspx?eventID={code}'
 
 from tinydb import TinyDB, Query
@@ -37,4 +37,4 @@ else:
 	winevent = sys.argv[1]
 
 eventInfo = get_info(winevent)
-print "\n{0} - {1} \n\t(ref: {2})\n".format(eventInfo.eid, eventInfo.title, eventInfo.link)
+print("\n{0} - {1} \n\t(ref: {2})\n".format(eventInfo.eid, eventInfo.title, eventInfo.link))
